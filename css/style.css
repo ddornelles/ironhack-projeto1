@@ -1,8 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
 
+html {
+  height: 100%;
+  width: 100%;
+}
 body {
   background-image: url(../imgs/home_bg.jpg);
-  background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+header h1 {
+  color: darkgoldenrod;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-family: 'Bungee Outline', cursive;
+  font-size: 72px;
+  font-weight: 900;
+}
+
+button.btn-start {
+  background-image: url(../imgs/button-start.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: 'Sedgwick Ave Display', cursive;
 }
