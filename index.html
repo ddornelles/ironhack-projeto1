@@ -32,31 +32,60 @@
             <canvas
               id="maze"
               class="d−block align-self-center"
-              width="400"
-              height="400"
+              width="460"
+              height="460"
             ></canvas>
           </div>
           <div class="col-3 mt-3"></div>
           <div class="row justify-content-center">
-            <div class="col-12 mt-3">
+            <div class="col-12">
               <!-- <span class="d-block"> -->
               <button
                 type="button"
                 id="start-game"
-                class="btn d-block align-self-center btn-start pt-5 pr-5 pb-5 pl-5"
+                class="btn align-self-center btn-start"
               >
-                START
+                <span class="d-block pt-3 pr-3 pb-3 pl-3">START</span>
               </button>
               <!-- </span> -->
             </div>
           </div>
         </div>
       </div>
+      <img src="./imgs/maze_floor.jpg" id="floor" alt="Maze Floor" hidden />
+      <img src="./imgs/maze_wall.jpg" id="wall" alt="Maze Floor" hidden />
+      <img
+        src="./imgs/user-right-20x20.png"
+        id="playerR"
+        alt="Maze Floor"
+        hidden
+      />
+      <img
+        src="./imgs/user-left-20x20.png"
+        id="playerL"
+        alt="Maze Floor"
+        hidden
+      />
+      <img
+        src="./imgs/user-front-20x20.png"
+        id="playerF"
+        alt="Maze Floor"
+        hidden
+      />
+      <img
+        src="./imgs/user-back-20x20.png"
+        id="playerB"
+        alt="Maze Floor"
+        hidden
+      />
     </main>
+
+    <script src="./js/maze_grid.js"></script>
+    <script src="./js/infinity-maze.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
+    <!-- <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
@@ -70,7 +99,6 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
-    ></script>
-    <script src="./js/infinity-maze.js"></script>
+    ></script> -->
   </body>
 </html>

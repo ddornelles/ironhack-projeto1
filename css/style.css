@@ -24,6 +24,11 @@ header h1 {
   font-size: 72px;
   font-weight: 900;
 }
+canvas {
+  background-image: url(../imgs/maze_bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
 
 button.btn-start {
   background-image: url(../imgs/button-start.png);

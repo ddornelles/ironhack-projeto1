@@ -1,35 +1,37 @@
 const mazeGridAll = [
-  ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'],
-  ['wall', 'path', 'path', 'path', 'path', 'wall', 'wall', 'path', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'wall', 'path', 'path', 'wall', 'path', 'path'],
-  ['wall', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'path', 'wall', 'wall', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'wall', 'path', 'wall'],
-  ['wall', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'wall', 'path', 'wall', 'path', 'wall', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall'],
-  ['wall', 'path', 'path', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'path', 'wall', 'path', 'path', 'wall', 'path', 'wall', 'wall', 'path', 'wall', 'path', 'wall'],
-  ['wall', 'path', 'wall', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'wall', 'wall', 'wall', 'wall', 'path', 'path', 'wall', 'path', 'wall', 'path', 'wall'],
-  ['wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'wall', 'path', 'path', 'path', 'wall', 'wall', 'path', 'path', 'path', 'wall'],
-  ['wall', 'wall', 'wall', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'path', 'wall', 'wall', 'wall', 'path', 'wall'],
-  ['wall', 'path', 'wall', 'path', 'path', 'path', 'wall', 'path', 'wall', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'wall'],
-  ['wall', 'path', 'wall', 'wall', 'wall', 'wall', 'wall', 'path', 'path', 'path', 'axis', 'path', 'path', 'path', 'wall', 'wall', 'wall', 'path', 'wall', 'wall', 'wall'],
-  ['wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'wall', 'wall', 'path', 'wall', 'path', 'path', 'path', 'path', 'path', 'wall'],
-  ['wall', 'path', 'path', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'wall', 'wall'],
-  ['wall', 'wall', 'path', 'wall', 'wall', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'path', 'path', 'wall'],
-  ['wall', 'path', 'path', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'path', 'wall'],
-  ['wall', 'wall', 'path', 'wall', 'path', 'wall', 'wall', 'wall', 'path', 'wall', 'wall', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'path', 'wall'],
-  ['wall', 'path', 'path', 'wall', 'path', 'path', 'path', 'wall', 'path', 'path', 'wall', 'path', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall'],
-  ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'path', 'wall', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'path', 'wall', 'wall', 'path', 'wall'],
-  ['wall', 'path', 'path', 'path', 'wall', 'path', 'path', 'wall', 'path', 'path', 'path', 'wall', 'path', 'path', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall'],
-  ['wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'wall', 'path', 'wall'],
-  ['path', 'path', 'wall', 'path', 'path', 'path', 'path', 'path', 'path', 'wall', 'path', 'path', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall'],
-  ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'],
+  ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'],
+  ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'path'],
+  ['wall', 'wall', 'path', 'path', 'path', 'path', 'wall', 'wall', 'path', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'wall', 'path', 'path', 'wall', 'path', 'path', 'path'],
+  ['wall', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'path', 'wall', 'wall', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'wall', 'path', 'wall', 'path'],
+  ['wall', 'wall', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'wall', 'path', 'wall', 'path', 'wall', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'wall'],
+  ['wall', 'wall', 'path', 'path', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'path', 'wall', 'path', 'path', 'wall', 'path', 'wall', 'wall', 'path', 'wall', 'path', 'wall', 'wall'],
+  ['wall', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'wall', 'wall', 'wall', 'wall', 'path', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'wall'],
+  ['wall', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'wall', 'path', 'path', 'path', 'wall', 'wall', 'path', 'path', 'path', 'wall', 'wall'],
+  ['wall', 'wall', 'wall', 'wall', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'path', 'wall', 'wall', 'wall', 'path', 'wall', 'wall'],
+  ['wall', 'wall', 'path', 'wall', 'path', 'path', 'path', 'wall', 'path', 'wall', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'wall'],
+  ['wall', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'wall', 'path', 'path', 'path', 'axis', 'path', 'path', 'path', 'wall', 'wall', 'wall', 'path', 'wall', 'wall', 'wall', 'wall'],
+  ['wall', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'wall', 'wall', 'path', 'wall', 'path', 'path', 'path', 'path', 'path', 'wall', 'wall'],
+  ['wall', 'wall', 'path', 'path', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'wall', 'wall', 'wall'],
+  ['wall', 'wall', 'wall', 'path', 'wall', 'wall', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'path', 'path', 'wall', 'wall'],
+  ['wall', 'wall', 'path', 'path', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'wall'],
+  ['wall', 'wall', 'wall', 'path', 'wall', 'path', 'wall', 'wall', 'wall', 'path', 'wall', 'wall', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'path', 'wall', 'wall'],
+  ['wall', 'wall', 'path', 'path', 'wall', 'path', 'path', 'path', 'wall', 'path', 'path', 'wall', 'path', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'wall'],
+  ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'path', 'wall', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'path', 'wall', 'wall', 'path', 'wall', 'wall'],
+  ['wall', 'wall', 'path', 'path', 'path', 'wall', 'path', 'path', 'wall', 'path', 'path', 'path', 'wall', 'path', 'path', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'wall'],
+  ['path', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'wall', 'wall', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'path', 'wall', 'wall', 'path', 'wall', 'wall'],
+  ['path', 'path', 'path', 'wall', 'path', 'path', 'path', 'path', 'path', 'path', 'wall', 'path', 'path', 'path', 'wall', 'path', 'path', 'path', 'path', 'wall', 'path', 'wall', 'wall'],
+  ['path', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'],
+  ['wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall', 'wall'],
 ]
 
 const allDirections = ['North', 'South', 'East', 'West'];
 
 const player = {
   direction: allDirections[2], // East
-  x: 19,
+  x: 20,
   y: 0,
   obstacle: ['wall'],
-  actualPath: [],
+  actualPath: [[20, 0]],
   lastPath: [],
 };
 
@@ -88,21 +90,28 @@ function walkOn() {
       }
       break;
   }
-  player.travelLog.push([player.x, player.y]);
+  player.actualPath.unshift([player.x, player.y]);
+  console.log(player.actualPath);
 }
 
-const playerActions = ['front', 'right', 'left'];
+const playerActions = ['f', 'r', 'l'];
 
 function goForward(playerActions) {
   for (let c = 0; c < playerActions.length; c += 1) {
     switch (playerActions[c]) {
-      case 'front':
-        walkOn();
+      case 'f':
+        if (player.y === 0 && player.direction === 'West') {
+          console.log('Limite alcaçado.');
+        } else if (player.y === 23 && player.direction === 'East') {
+          console.log('Limite alcaçado.');
+        } else {
+          walkOn();
+        }
         break;
-      case 'right':
+      case 'r':
         right();
         break;
-      case 'left':
+      case 'l':
         left();
         break;
     }
