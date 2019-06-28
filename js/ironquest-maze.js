@@ -54,6 +54,7 @@ const conqsCollected = (player) => {
       timeleft += 3;
       const conquered = document.getElementById('number1');
       conquered.innerHTML = conqsNumbers += 1;
+      playAudio(conquestGame);
     } else if (index > 0) {
       conqArray[index - 1].draw();
     }
@@ -68,6 +69,21 @@ const playerWinsImg = new Component('imgs/you-win.png', 10, 10, 480, 480);
 const gameOverImg = new Component('imgs/game-over.png', 10, 118, 480, 263);
 
 document.getElementById('start-game').onclick = function () {
+  const countdownTimer = setInterval(() => {
+    document.getElementById('countseconds').innerHTML = `[ <span id="number2">${timeleft}</span> ] <br>segundos restantes`;
+    timeleft -= 1;
+    if (timeleft <= -1) {
+      pauseAudio(runGame);
+      clearInterval(countdownTimer);
+      gameOver();
+    }
+    if (canvasBoy.posX === finishLine.posX && canvasBoy.posY === finishLine.posY || conqsNumbers === 12) {
+      pauseAudio(runGame);
+      clearInterval(countdownTimer);
+      playerWins();
+    }
+  }, 1000);
+
   drawBoard();
 
   const canvasBg = document.getElementById('maze');
@@ -79,22 +95,11 @@ document.getElementById('start-game').onclick = function () {
 
   finishLine.draw();
 
-  const countdownTimer = setInterval(() => {
-    document.getElementById('countseconds').innerHTML = `[ <span id="number2">${timeleft}</span> ] <br>segundos restantes`;
-    timeleft -= 1;
-    if (timeleft <= -1) {
-      clearInterval(countdownTimer);
-      gameOver();
-    }
-    if (canvasBoy.posX === finishLine.posX && canvasBoy.posY === finishLine.posY || conqsNumbers === 12) {
-      clearInterval(countdownTimer);
-      playerWins();
-    }
-  }, 1000);
-
   conqArray.forEach((element) => {
     element.draw();
   });
+
+  playAudio(runGame);
 };
 
 document.onkeydown = (e) => {
@@ -159,13 +164,50 @@ const updateMaze = () => {
   finishLine.draw();
 };
 
+const finishGame = document.getElementById('finishGameSound');
+function playAudio(finishGame) {
+  finishGame.play();
+}
+
+const endGame = document.getElementById('gameOverSound');
+function playAudio(endGame) {
+  endGame.play();
+}
+
+const runGame = document.getElementById('mazeRunningSound');
+function playAudio(runGame) {
+  runGame.play();
+}
+function pauseAudio(runGame) { 
+  runGame.pause(); 
+}
+
+const conquestGame = document.getElementById('conquestSound');
+function playAudio(conquestGame) {
+  conquestGame.play();
+}
+
+
 const playerWins = () => {
   clear();
   drawBoard();
+  playAudio(finishGame);
   playerWinsImg.draw();
+  document.onkeydown = (e) => {
+    if (e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40) {
+      e.preventDefault();
+    }
+  };
 };
+
 const gameOver = () => {
   clear();
   drawBoard();
+  playAudio(endGame);
   gameOverImg.draw();
+  document.onkeydown = (e) => {
+    if (e.keyCode === 37 || e.keyCode === 38 || e.keyCode === 39 || e.keyCode === 40) {
+      e.preventDefault();
+    }
+  };
 };
