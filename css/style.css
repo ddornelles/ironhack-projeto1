@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee+Outline&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Faster+One&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -14,20 +14,34 @@ body {
   background-image: url(../imgs/home_bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: /* 100% auto */cover;
 }
 
 header h1 {
   color: darkgoldenrod;
   background-color: rgba(0, 0, 0, 0.4);
-  font-family: 'Bungee Outline', cursive;
+  /* font-family: 'Bungee Outline', cursive; */
+  font-family: 'Faster One', cursive;
   font-size: 72px;
-  font-weight: 900;
+  font-weight: 500;
 }
-canvas {
+
+/* #conquests ul */
+
+.canvas-before {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.canvas-after {
   background-image: url(../imgs/maze_bg.png);
   background-position: center center;
-  background-repeat: no-repeat;
+}
+
+span#countdown {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'Bungee Outline', cursive;
+  font-size: 308px;
+  font-weight: 900;
+  left: 29.5%;
 }
 
 button.btn-start {
@@ -37,4 +51,20 @@ button.btn-start {
   background-size: contain;
   color: darkgreen;
   font-family: 'Sedgwick Ave Display', cursive;
+}
+
+p {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: darkgoldenrod;
+  /* color: whitesmoke; */
+  font-family: 'Sedgwick Ave Display', cursive;
+  font-size: 36px;
+}
+
+p span#number1 {
+  color: darkblue;
+}
+
+p span#number2 {
+  color: darkred;
 }
