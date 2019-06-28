@@ -5,10 +5,10 @@
 ### Tecnologias
 
 <ul>
-  <li>- HTML5</li>
-  <li>- CSS3</li>
-  <li>- Canvas</li>
-  <li>- JavaScript</li>
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>Canvas</li>
+  <li>JavaScript</li>
 </ul>
 
 ### Abordagem
