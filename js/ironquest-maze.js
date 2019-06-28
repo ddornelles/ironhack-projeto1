@@ -86,7 +86,7 @@ document.getElementById('start-game').onclick = function () {
       clearInterval(countdownTimer);
       gameOver();
     }
-    if (canvasBoy.posX === finishLine.posX && canvasBoy.posY === finishLine.posY) {
+    if (canvasBoy.posX === finishLine.posX && canvasBoy.posY === finishLine.posY || conqsNumbers === 12) {
       clearInterval(countdownTimer);
       playerWins();
     }
@@ -111,8 +111,8 @@ document.onkeydown = (e) => {
     case 38:
       walkUp();
       updateMaze();
-
       conqsCollected(canvasBoy);
+
       canvasBoy.src = '../imgs/user-back-20x20.png';
       canvasBoy.posY = player.actualPath[0][0] * 20;
       canvasBoy.draw();
@@ -120,8 +120,8 @@ document.onkeydown = (e) => {
     case 39:
       walkRight();
       updateMaze();
-
       conqsCollected(canvasBoy);
+
       canvasBoy.src = '../imgs/user-right-20x20.png';
       canvasBoy.posX = player.actualPath[0][1] * 20;
       canvasBoy.draw();
@@ -129,8 +129,8 @@ document.onkeydown = (e) => {
     case 40:
       walkDown();
       updateMaze();
-
       conqsCollected(canvasBoy);
+
       canvasBoy.src = '../imgs/user-front-20x20.png';
       canvasBoy.posY = player.actualPath[0][0] * 20;
       canvasBoy.draw();
