@@ -18,18 +18,18 @@ class Component {
 }
 
 const conqArray = [
-  new Component('../imgs/quests/vscode-quest.png', 10 * 20, 21 * 20, 20, 20),
-  new Component('../imgs/quests/git-quest.png', 3 * 20, 17 * 20, 20, 20),
-  new Component('../imgs/quests/github-quest.png', 3 * 20, 10 * 20, 20, 20),
-  new Component('../imgs/quests/codepen-quest.png', 21 * 20, 21 * 20, 20, 20),
-  new Component('../imgs/quests/html-quest.png', 19 * 20, 10 * 20, 20, 20),
-  new Component('../imgs/quests/css-quest.png', 13 * 20, 17 * 20, 20, 20),
-  new Component('../imgs/quests/js-quest.png', 11 * 20, 5 * 20, 20, 20),
-  new Component('../imgs/quests/codewars-quest.png', 3 * 20, 8 * 20, 20, 20),
-  new Component('../imgs/quests/bootstrap-quest.png', 6 * 20, 3 * 20, 20, 20),
-  new Component('../imgs/quests/jquery-quest.png', 14 * 20, 6 * 20, 20, 20),
-  new Component('../imgs/quests/canvas-quest.png', 17 * 20, 10 * 20, 20, 20),
-  new Component('../imgs/quests/nodejs-quest.png', 19 * 20, 3 * 20, 20, 20)
+  new Component('imgs/quests/vscode-quest.png', 10 * 20, 21 * 20, 20, 20),
+  new Component('imgs/quests/git-quest.png', 3 * 20, 17 * 20, 20, 20),
+  new Component('imgs/quests/github-quest.png', 3 * 20, 10 * 20, 20, 20),
+  new Component('imgs/quests/codepen-quest.png', 21 * 20, 21 * 20, 20, 20),
+  new Component('imgs/quests/html-quest.png', 19 * 20, 10 * 20, 20, 20),
+  new Component('imgs/quests/css-quest.png', 13 * 20, 17 * 20, 20, 20),
+  new Component('imgs/quests/js-quest.png', 11 * 20, 5 * 20, 20, 20),
+  new Component('imgs/quests/codewars-quest.png', 3 * 20, 8 * 20, 20, 20),
+  new Component('imgs/quests/bootstrap-quest.png', 6 * 20, 3 * 20, 20, 20),
+  new Component('imgs/quests/jquery-quest.png', 14 * 20, 6 * 20, 20, 20),
+  new Component('imgs/quests/canvas-quest.png', 17 * 20, 10 * 20, 20, 20),
+  new Component('imgs/quests/nodejs-quest.png', 19 * 20, 3 * 20, 20, 20)
 ];
 
 /* const conqueredList = (player) => {
@@ -63,9 +63,9 @@ const conqsCollected = (player) => {
 
 let canvasBoy;
 let timeleft = 30;
-const finishLine = new Component('../imgs/finish-line.png', 480, 60, 20, 20);
-const playerWinsImg = new Component('../imgs/you-win.png', 10, 10, 480, 480);
-const gameOverImg = new Component('../imgs/game-over.png', 10, 118, 480, 263);
+const finishLine = new Component('imgs/finish-line.png', 480, 60, 20, 20);
+const playerWinsImg = new Component('imgs/you-win.png', 10, 10, 480, 480);
+const gameOverImg = new Component('imgs/game-over.png', 10, 118, 480, 263);
 
 document.getElementById('start-game').onclick = function () {
   drawBoard();
@@ -74,7 +74,7 @@ document.getElementById('start-game').onclick = function () {
   canvasBg.setAttribute('class', 'canvas-after');
   canvasBg.classList.remove('class-before');
 
-  canvasBoy = new Component('../imgs/user-right-20x20.png', player.actualPath[0][1] * 20, player.actualPath[0][0] * 20, 20, 20);
+  canvasBoy = new Component('imgs/user-right-20x20.png', player.actualPath[0][1] * 20, player.actualPath[0][0] * 20, 20, 20);
   canvasBoy.draw();
 
   finishLine.draw();
@@ -104,7 +104,7 @@ document.onkeydown = (e) => {
       updateMaze();
       conqsCollected(canvasBoy);
 
-      canvasBoy.src = '../imgs/user-left-20x20.png';
+      canvasBoy.src = 'imgs/user-left-20x20.png';
       canvasBoy.posX = player.actualPath[0][1] * 20;
       canvasBoy.draw();
       break;
@@ -113,7 +113,7 @@ document.onkeydown = (e) => {
       updateMaze();
       conqsCollected(canvasBoy);
 
-      canvasBoy.src = '../imgs/user-back-20x20.png';
+      canvasBoy.src = 'imgs/user-back-20x20.png';
       canvasBoy.posY = player.actualPath[0][0] * 20;
       canvasBoy.draw();
       break;
@@ -122,7 +122,7 @@ document.onkeydown = (e) => {
       updateMaze();
       conqsCollected(canvasBoy);
 
-      canvasBoy.src = '../imgs/user-right-20x20.png';
+      canvasBoy.src = 'imgs/user-right-20x20.png';
       canvasBoy.posX = player.actualPath[0][1] * 20;
       canvasBoy.draw();
       break;
@@ -131,7 +131,7 @@ document.onkeydown = (e) => {
       updateMaze();
       conqsCollected(canvasBoy);
 
-      canvasBoy.src = '../imgs/user-front-20x20.png';
+      canvasBoy.src = 'imgs/user-front-20x20.png';
       canvasBoy.posY = player.actualPath[0][0] * 20;
       canvasBoy.draw();
       break;
@@ -146,7 +146,7 @@ const drawBoard = () => {
   for (let i = 0; i < mazeGridAll.length; i += 1) {
     for (let j = 0; j < mazeGridAll.length; j += 1) {
       if (mazeGridAll[i][j] === 'wall') {
-        const wall = new Component('../imgs/maze_wall.jpg', j * 20, i * 20, 20, 20);
+        const wall = new Component('imgs/maze_wall.jpg', j * 20, i * 20, 20, 20);
         wall.draw();
       }
     }
