@@ -17,10 +17,26 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Ironquest Maze</title>
   </head>
-  <body>
+  <body>    
+    <audio id="finishGameSound">
+      <source src="sounds/finishGame.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="gameOverSound">
+      <source src="sounds/game-over.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="mazeRunningSound">
+      <source src="sounds/maze-running.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="conquestSound">
+      <source src="sounds/conquest.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
     <main>
       <header>
         <h1 class="mb-2 text-center">Ironquest Maze</h1>
@@ -30,18 +46,18 @@
           <div id="conquests" class="col-sm-12 col-md-3 col-lg-3 col-xl-3 mt-3">
             <p class="d-inline-block text-center p-2">[ <span id="number1">0</span> ] Conquistas</p>
             <ul class="list-group">
-              <li id="quest1" class="list-group-item" hidden><img src="./imgs/quests/vscode-quest.png" alt=""> VSCode</li>
-              <li id="quest2" class="list-group-item" hidden><img src="./imgs/quests/git-quest.png" alt=""> Git</li>
-              <li id="quest3" class="list-group-item" hidden><img src="./imgs/quests/github-quest.png" alt=""> GitHub</li>
-              <li id="quest4" class="list-group-item" hidden><img src="./imgs/quests/codepen-quest.png" alt=""> CodePen</li>
-              <li id="quest5" class="list-group-item" hidden><img src="./imgs/quests/html-quest.png" alt=""> HTML5</li>
-              <li id="quest6" class="list-group-item" hidden><img src="./imgs/quests/css-quest.png" alt=""> CSS3</li>
-              <li id="quest7" class="list-group-item" hidden><img src="./imgs/quests/js-quest.png" alt=""> JavaScript</li>
-              <li id="quest8" class="list-group-item" hidden><img src="./imgs/quests/codewars-quest.png" alt=""> CodeWars</li>
-              <li id="quest9" class="list-group-item" hidden><img src="./imgs/quests/bootstrap-quest.png" alt=""> Bootstrap</li>
-              <li id="quest10" class="list-group-item" hidden><img src="./imgs/quests/jquery-quest.png" alt=""> jQuery</li>
-              <li id="quest11" class="list-group-item" hidden><img src="./imgs/quests/canvas-quest.png" alt=""> Canvas</li>
-              <li id="quest12" class="list-group-item" hidden><img src="./imgs/quests/nodejs-quest.png" alt=""> NodeJS</li>
+              <li id="quest1" class="list-group-item" hidden><img src="imgs/quests/vscode-quest.png" alt=""> VSCode</li>
+              <li id="quest2" class="list-group-item" hidden><img src="imgs/quests/git-quest.png" alt=""> Git</li>
+              <li id="quest3" class="list-group-item" hidden><img src="imgs/quests/github-quest.png" alt=""> GitHub</li>
+              <li id="quest4" class="list-group-item" hidden><img src="imgs/quests/codepen-quest.png" alt=""> CodePen</li>
+              <li id="quest5" class="list-group-item" hidden><img src="imgs/quests/html-quest.png" alt=""> HTML5</li>
+              <li id="quest6" class="list-group-item" hidden><img src="imgs/quests/css-quest.png" alt=""> CSS3</li>
+              <li id="quest7" class="list-group-item" hidden><img src="imgs/quests/js-quest.png" alt=""> JavaScript</li>
+              <li id="quest8" class="list-group-item" hidden><img src="imgs/quests/codewars-quest.png" alt=""> CodeWars</li>
+              <li id="quest9" class="list-group-item" hidden><img src="imgs/quests/bootstrap-quest.png" alt=""> Bootstrap</li>
+              <li id="quest10" class="list-group-item" hidden><img src="imgs/quests/jquery-quest.png" alt=""> jQuery</li>
+              <li id="quest11" class="list-group-item" hidden><img src="imgs/quests/canvas-quest.png" alt=""> Canvas</li>
+              <li id="quest12" class="list-group-item" hidden><img src="imgs/quests/nodejs-quest.png" alt=""> NodeJS</li>
             </ul>
           </div>
           <div class="col-md-6 mt-3 text-center position-relative">
@@ -70,30 +86,30 @@
         </div>
         <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 mt-3"></div>
       </div>
-      <img src="./imgs/maze_floor.jpg" id="floor" alt="Maze Floor" hidden />
-      <img src="./imgs/maze_wall.jpg" id="wall" alt="Maze Wall" hidden />
-      <img src="./imgs/finish-line.png" id="fini" alt="Finish Line" hidden />
-      <img src="./imgs/user-right-20x20.png" id="playerR" alt="Player Right" hidden />
-      <img src="./imgs/user-left-20x20.png" id="playerL" alt="Player Left" hidden />
-      <img src="./imgs/user-front-20x20.png" id="playerF" alt="Player Front" hidden />
-      <img src="./imgs/user-back-20x20.png" id="playerB" alt="Player Back" hidden />
-      <img src="./imgs/quests/vscode-quest.png" id="vscode" alt="VSCode" hidden />
-      <img src="./imgs/quests/git-quest.png" id="git" alt="Git" hidden />
-      <img src="./imgs/quests/github-quest.png" id="github" alt="GitHub" hidden />
-      <img src="./imgs/quests/codepen-quest.png" id="codepen" alt="CodePen" hidden />
-      <img src="./imgs/quests/html-quest.png" id="html5" alt="HTML5" hidden />
-      <img src="./imgs/quests/css-quest.png" id="css3" alt="CSS3" hidden />
-      <img src="./imgs/quests/js-quest.png" id="js" alt="JS" hidden />
-      <img src="./imgs/quests/codewars-quest.png" id="js" alt="JS" hidden />
-      <img src="./imgs/quests/bootstrap-quest.png" id="bootstrap" alt="Bootstrap" hidden />
-      <img src="./imgs/quests/jquery-quest.png" id="jquery" alt="jQuery" hidden />
-      <img src="./imgs/quests/canvas-quest.png" id="canvas" alt="Canvas" hidden />
-      <img src="./imgs/quests/nodejs-quest.png" id="nodejs" alt="NodeJS" hidden />
-      <img src="./imgs/game-over.png" id="gameover" alt="Game Over" hidden />
-      <img src="./imgs/you-win.png" id="youwin" alt="You Win" hidden />
+      <img src="imgs/maze_floor.jpg" id="floor" alt="Maze Floor" hidden />
+      <img src="imgs/maze_wall.jpg" id="wall" alt="Maze Wall" hidden />
+      <img src="imgs/finish-line.png" id="fini" alt="Finish Line" hidden />
+      <img src="imgs/user-right-20x20.png" id="playerR" alt="Player Right" hidden />
+      <img src="imgs/user-left-20x20.png" id="playerL" alt="Player Left" hidden />
+      <img src="imgs/user-front-20x20.png" id="playerF" alt="Player Front" hidden />
+      <img src="imgs/user-back-20x20.png" id="playerB" alt="Player Back" hidden />
+      <img src="imgs/quests/vscode-quest.png" id="vscode" alt="VSCode" hidden />
+      <img src="imgs/quests/git-quest.png" id="git" alt="Git" hidden />
+      <img src="imgs/quests/github-quest.png" id="github" alt="GitHub" hidden />
+      <img src="imgs/quests/codepen-quest.png" id="codepen" alt="CodePen" hidden />
+      <img src="imgs/quests/html-quest.png" id="html5" alt="HTML5" hidden />
+      <img src="imgs/quests/css-quest.png" id="css3" alt="CSS3" hidden />
+      <img src="imgs/quests/js-quest.png" id="js" alt="JS" hidden />
+      <img src="imgs/quests/codewars-quest.png" id="js" alt="JS" hidden />
+      <img src="imgs/quests/bootstrap-quest.png" id="bootstrap" alt="Bootstrap" hidden />
+      <img src="imgs/quests/jquery-quest.png" id="jquery" alt="jQuery" hidden />
+      <img src="imgs/quests/canvas-quest.png" id="canvas" alt="Canvas" hidden />
+      <img src="imgs/quests/nodejs-quest.png" id="nodejs" alt="NodeJS" hidden />
+      <img src="imgs/game-over.png" id="gameover" alt="Game Over" hidden />
+      <img src="imgs/you-win.png" id="youwin" alt="You Win" hidden />
     </main>
 
-    <script src="./js/maze_grid.js"></script>
-    <script src="./js/ironquest-maze.js"></script>
+    <script src="js/maze_grid.js"></script>
+    <script src="js/ironquest-maze.js"></script>
   </body>
 </html>
